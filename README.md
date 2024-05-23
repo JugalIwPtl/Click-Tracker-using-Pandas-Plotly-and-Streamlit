@@ -1,6 +1,6 @@
 ## Overview
 
-This project aims to track user interactions and visualize click data using Plotly, an open-source Python library for creating web applications. By recording clicks on an HTML interface and analyzing the data, we can gain insights into user behavior and product demand. This project leverages Streamlit for building the interactive dashboard and Python for data processing and visualization.
+This project aims to track user interactions and visualize click data using Plotly, an open-source Python library for creating graphical plots. By recording clicks on an HTML interface and analyzing the data, we can gain insights into user behavior and product demand. This project leverages Pandas for extracting the data collected from clicks and making it suitable for the Plotly to process.
 
 ## Project Structure
 ### JugalIwPtl/
