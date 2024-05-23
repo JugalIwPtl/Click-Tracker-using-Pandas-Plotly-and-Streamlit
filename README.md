@@ -8,7 +8,6 @@ This project aims to track user interactions and visualize click data using Stre
 ### ├── click_data.json # JSON file for storing click data
 ### ├── index.html # HTML file with clickable buttons
 ### ├── server.js # Express server for handling click data (not used in Streamlit version)
-### ├── streamlit_app.py # Streamlit web application for analyzing and visualizing click data
 ### ├── Clicl_data.ipynb # Jupyter Notebook for exploring click data (optional)
 ### ├── package.json # Package configuration file (not used in Streamlit version)
 ### └── package-lock.json # Dependency lock file (not used in Streamlit version)
@@ -16,16 +15,15 @@ This project aims to track user interactions and visualize click data using Stre
 ## Requirements
 
 - Python 3.x
-- Streamlit
 - pandas
 - seaborn
 - plotly
 - json
 
 ## Data Analysis and Visualization
-The Streamlit web application streamlit_app.py performs the following steps:
+The Plotly library performs the data visualisation of the click_data.json file.
 
-## Load Data:
+## Load Data using pandas:
 Reads the click data from click_data.json.
 
 ## Data Processing:
@@ -38,7 +36,6 @@ Converts timestamps to datetime objects and aggregates click data by date and bu
 
 ## Importance of Data Science in Business
 Data science plays a crucial role in helping businesses understand user behavior and improve their conversion rates. By tracking clicks and interactions, businesses can:
-
 ### Identify popular products and features.
 ### Optimize user experience based on interaction patterns.
 ### Make data-driven decisions to increase sales and engagement.
