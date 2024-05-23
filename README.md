@@ -3,16 +3,15 @@
 This project aims to track user interactions and visualize click data using Streamlit, an open-source Python library for creating web applications. By recording clicks on an HTML interface and analyzing the data, we can gain insights into user behavior and product demand. This project leverages Streamlit for building the interactive dashboard and Python for data processing and visualization.
 
 ## Project Structure
-
-JugalIwPtl/
-├── README.md # Project documentation
-├── click_data.json # JSON file for storing click data
-├── index.html # HTML file with clickable buttons
-├── server.js # Express server for handling click data (not used in Streamlit version)
-├── streamlit_app.py # Streamlit web application for analyzing and visualizing click data
-├── Clicl_data.ipynb # Jupyter Notebook for exploring click data (optional)
-├── package.json # Package configuration file (not used in Streamlit version)
-└── package-lock.json # Dependency lock file (not used in Streamlit version)
+### JugalIwPtl/
+### ├── README.md # Project documentation
+### ├── click_data.json # JSON file for storing click data
+### ├── index.html # HTML file with clickable buttons
+### ├── server.js # Express server for handling click data (not used in Streamlit version)
+### ├── streamlit_app.py # Streamlit web application for analyzing and visualizing click data
+### ├── Clicl_data.ipynb # Jupyter Notebook for exploring click data (optional)
+### ├── package.json # Package configuration file (not used in Streamlit version)
+### └── package-lock.json # Dependency lock file (not used in Streamlit version)
 
 ## Requirements
 
