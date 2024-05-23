@@ -1,0 +1,14 @@
+{
+  "name": "click-trackers",
+  "version": "1.0.0",
+  "main": "server.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Jugal Ishvarbhai Patel",
+  "license": "ISC",
+  "description": "A Data Science Project on how the Analytics Services Works. It may not be accurate but i have tried to mimic it through my own logic"
+}

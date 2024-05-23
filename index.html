@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Tracking Test</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 5px;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+
+        .button {
+            background-color: Red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <button class="grid-item button" data-track="true" id="button1">Button 1</button>
+        <button class="grid-item button" data-track="true" id="button2">Button 2</button>
+        <button class="grid-item button" data-track="true" id="button3">Button 3</button>
+        <button class="grid-item button" data-track="true"  id="button4">Button 4</button>
+        <button class="grid-item button" data-track="true"  id="button5">Button 5</button>
+        <button class="grid-item button" data-track="true"  id="button6">Button 6</button>
+        <button class="grid-item button" data-track="true"  id="button7">Button 7</button>
+        <button class="grid-item button" data-track="true"  id="button8">Button 8</button>
+        <button class="grid-item button" data-track="true"  id="button9">Button 9</button>
+        <button class="grid-item button" data-track="true"  id="button10">Button 10</button>
+        <button class="grid-item button" data-track="true"  id="button11">Button 11</button>
+        <button class="grid-item button" data-track="true"  id="button12">Button 12</button>
+        <button class="grid-item button" data-track="true"  id="button13">Button 13</button>
+        <button class="grid-item button" data-track="true"  id="button14">Button 14</button>
+        <button class="grid-item button" data-track="true"  id="button15">Button 15</button>
+        <button class="grid-item button" data-track="true"  id="button16">Button 16</button>
+        <button class="grid-item button" data-track="true"  id="button17">Button 17</button>
+        <button class="grid-item button" data-track="true"  id="button18">Button 18</button>
+        <button class="grid-item button" data-track="true"  id="button19">Button 19</button>
+        <button class="grid-item button" data-track="true"  id="button20">Button 20</button>
+        <button class="grid-item button" data-track="true"  id="button21">Button 21</button>
+        <button class="grid-item button" data-track="true"  id="button22">Button 22</button>
+        <button class="grid-item button" data-track="true"  id="button23">Button 23</button>
+        <button class="grid-item button" data-track="true"  id="button24">Button 24</button>
+        <button class="grid-item button" data-track="true"  id="button25">Button 25</button>
+        <button class="grid-item button" data-track="true"  id="button26">Button 26</button>
+        <button class="grid-item button" data-track="true"  id="button27">Button 27</button>
+        <button class="grid-item button" data-track="true"  id="button28">Button 28</button>
+        <button class="grid-item button" data-track="true"  id="button29">Button 29</button>
+        <button class="grid-item button" data-track="true"  id="button30">Button 30</button>
+        <button class="grid-item button" data-track="true"  id="button31">Button 31</button>
+        <button class="grid-item button" data-track="true"  id="button32">Button 32</button>
+        <button class="grid-item button" data-track="true"  id="button33">Button 33</button>
+        <button class="grid-item button" data-track="true"  id="button34">Button 34</button>
+        <button class="grid-item button" data-track="true"  id="button35">Button 35</button>
+        <button class="grid-item button" data-track="true"  id="button36">Button 36</button>
+        <button class="grid-item button" data-track="true"  id="button37">Button 37</button>
+        <button class="grid-item button" data-track="true"  id="button38">Button 38</button>
+        <button class="grid-item button" data-track="true"  id="button39">Button 39</button>
+        <button class="grid-item button" data-track="true"  id="button40">Button 40</button>
+        <button class="grid-item button" data-track="true"  id="button41">Button 41</button>
+        <button class="grid-item button" data-track="true"  id="button42">Button 42</button>
+        <button class="grid-item button" data-track="true"  id="button43">Button 43</button>
+        <button class="grid-item button" data-track="true"  id="button44">Button 44</button>
+        <button class="grid-item button" data-track="true"  id="button45">Button 45</button>
+        <button class="grid-item button" data-track="true"  id="button46">Button 46</button>
+        <button class="grid-item button" data-track="true"  id="button47">Button 47</button>
+        <button class="grid-item button" data-track="true"  id="button48">Button 48</button>
+        <button class="grid-item button" data-track="true"  id="button49">Button 49</button>
+        <button class="grid-item button" data-track="true"  id="button50">Button 50</button>
+
+</div>
+
+<script>
+    document.addEventListener('click', function(event) {
+    var element = event.target;
+    var track = element.getAttribute('data-track'); 
+    if (track === 'true') {
+        var elementTag = element.tagName.toLowerCase();
+        var elementId = element.id;
+        var elementClass = element.className;
+        var elementText = element.innerText;
+        var timestamp = new Date().toISOString(); 
+
+        var clickData = {
+            timestamp: timestamp,
+            elementTag: elementTag,
+            elementId: elementId,
+            elementClass: elementClass,
+            elementText: elementText
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:5500/api/track-click', true); 
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.addEventListener('load', function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                console.log('Request successful');
+            } else {
+                console.error('Request failed with status: ' + xhr.status);
+            }
+        });
+        xhr.addEventListener('error', function() {
+            console.error('Request failed');
+        });
+        xhr.send(JSON.stringify(clickData));
+    }
+});
+
+</script>
+</body>
+</html>
